@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamepac.BattleController">
+   <children>
+      <ImageView fitHeight="421.0" fitWidth="643.0" layoutX="-2.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tarnished%20paper.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="BattleSceneIamgeView" fitHeight="360.0" fitWidth="636.0" layoutX="-4.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BattleScene1.png" />
+         </image>
+      </ImageView>
+      <Button id="playerAttack" fx:id="playerAttack" layoutX="187.0" layoutY="360.0" mnemonicParsing="false" onAction="#playerAttack" style="-fx-background-color: #88592E;" text="Attack" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="18.0" />
+         </font></Button>
+      <Button id="playerServe" fx:id="playerServe" layoutX="285.0" layoutY="360.0" mnemonicParsing="false" onAction="#playerServe" style="-fx-background-color: #88592E;" text="Serve" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="18.0" />
+         </font></Button>
+      <Button id="playerHeal" fx:id="playerHeal" layoutX="375.0" layoutY="360.0" mnemonicParsing="false" onAction="#playerHeal" style="-fx-background-color: #88592E;" text="Heal" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="18.0" />
+         </font></Button>
+      	<StackPane layoutX="172.0" layoutY="164.0">
+      		<ProgressBar fx:id="progressBarPlayer" prefHeight="20.0" prefWidth="111.0" progress="1.0" />
+      		<Text fill="BLACK" text="Health">
+            <font>
+               <Font name="Centaur" size="12.0" />
+            </font></Text>
+      	</StackPane>
+      	<StackPane layoutX="359.0" layoutY="64.0">
+      		<ProgressBar fx:id="progressBarEnemy" prefHeight="20.0" prefWidth="111.0" progress="1.0" />
+      		<Text fill="BLACK" text="Health" />
+      	</StackPane>
+      	<StackPane layoutX="359" layoutY="44.0">
+      		<ProgressBar fx:id="progressBarFriendship" prefHeight="20.0" prefWidth="111.0" />
+      		<Text fill="BLACK" text="Friendship" />
+      	</StackPane>
+      <ImageView fx:id="idlePlayerImageView" fitHeight="106.0" fitWidth="95.0" layoutX="179.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gothic-hero-idle.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="idleEnemyImageView" fitHeight="262.0" fitWidth="355.0" layoutX="237.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@demon-idle.gif" />
+         </image>
+      </ImageView>
+      <!--<TextArea id="display" fx:id="display" layoutX="28.0" layoutY="31.0" prefHeight="106.0" prefWidth="247.0" promptText="THE BATTLE BEGINS" />-->
+   </children>
+</AnchorPane>

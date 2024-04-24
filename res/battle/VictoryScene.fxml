@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamepac.VictoryController">
+   <children>
+      <ImageView fx:id="defeatedSceneImageView" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@BattleScene1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="defeatedSceneLabel" layoutX="111.0" layoutY="53.0" text="BATTLE WON" textFill="#fff9f9">
+         <font>
+            <Font name="Centaur" size="60.0" />
+         </font>
+      </Label>
+      <Button fx:id="defeatedSceneButton" layoutX="246.0" layoutY="183.0" mnemonicParsing="false" onAction="#victoryButtonPressed" style="-fx-background-color: #5A5547;" text="Back to Map" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="18.0" />
+         </font></Button>
+      <Label fx:id="byLabel" layoutX="65.0" layoutY="314.0" prefHeight="38.0" prefWidth="471.0" text="By: Trenton Weyland, David Coyle, and Alexis White" textFill="#fffdfd">
+         <font>
+            <Font name="Centaur" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

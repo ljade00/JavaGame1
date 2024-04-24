@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamepac.MapController">
+   <bottom>
+      <SplitPane dividerPositions="0.5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" style="-fx-background-color: #E8E3D7;" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="310.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@tarnished%20paper.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField id="playerInfo" fx:id="playerInfo" editable="false" focusTraversable="false" layoutX="-3.0" prefHeight="35.0" prefWidth="285.0" promptText="text" style="-fx-background-color: transparent;" text="text">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="potionInfo" fx:id="potionInfo" alignment="TOP_CENTER" editable="false" focusTraversable="false" layoutX="-1.0" layoutY="39.0" prefHeight="35.0" prefWidth="285.0" promptText="  " style="-fx-background-color: transparent;" text="   ">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </TextField>
+               </children></AnchorPane>
+          <AnchorPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #E8E3D7;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="310.0" layoutX="-2.0" layoutY="-22.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@tarnished%20paper.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button id="right" fx:id="right" layoutX="247.0" layoutY="39.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#right" style="-fx-background-color: #E8E3D7;" text="&gt;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="up" fx:id="up" layoutX="210.0" layoutY="2.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#up" style="-fx-background-color: #E8E3D7;" text="^">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="left" fx:id="left" layoutX="173.0" layoutY="39.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#left" style="-fx-background-color: #E8E3D7;" text="&lt;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="down" fx:id="down" layoutX="210.0" layoutY="39.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#down" style="-fx-background-color: #E8E3D7;" text="v">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <center>
+      <GridPane id="gridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="floor" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@floor.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image></ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="6">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image>
+            </ImageView>
+            <ImageView id="monster" fx:id="monster" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@enemyMapIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView id="monster" fx:id="monster" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@enemyMapIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView id="wall" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@DarkBrickWall.png" />
+               </image>
+            </ImageView>
+            <ImageView id="exit" fx:id="exit" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@exit.png" />
+               </image>
+            </ImageView>
+            <ImageView id="healthPotion" fx:id="healthPotion" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@HealingPot.png" />
+               </image>
+            </ImageView>
+            <ImageView id="monster" fx:id="monster" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@enemyMapIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView id="monster" fx:id="monster" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@enemyMapIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView id="monster" fx:id="monster" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@enemyMapIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView id="monster" fx:id="monster" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@enemyMapIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView id="playerOnMap" fx:id="playerOnMap" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@playerMapIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

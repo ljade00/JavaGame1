@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamepac.StartController">
+   <children>
+      <ImageView fx:id="startMenuImageView" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@ZB6YSk.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="titleMenuLabel" layoutX="139.0" layoutY="57.0" text="JAVA BEAST" textFill="#fff9f9">
+         <font>
+            <Font name="Centaur" size="60.0" />
+         </font>
+      </Label>
+      <Button fx:id="startGameButton" layoutX="234.0" layoutY="177.0" mnemonicParsing="false" onAction="#startButtonPressed" style="-fx-background-color: #5A5547;" text="Start Game" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="24.0" />
+         </font></Button>
+      <Label fx:id="byLabel" layoutX="55.0" layoutY="304.0" prefHeight="38.0" prefWidth="489.0" text="By: Trenton Weyland, David Coyle, and Alexis White" textFill="#fffdfd">
+         <font>
+            <Font name="Centaur" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
